@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI & Future Tech by Ibrahim King 1234</title>
+  <meta name="description" content="Portfolio and job opportunities in AI, Python, ML.">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">Ibrahim King 1234</div>
+      <div class="tagline">AI & Future Tech — Python • ML • Web</div>
+    </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <canvas id="bg"></canvas>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1>Building the Future with AI</h1>
+        <p class="lead">Ibrahim King 1234 — exploring Python, Machine Learning, and next-generation technologies. Ready for internship or entry-level roles.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="#projects">See Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>I am passionate about Artificial Intelligence and emerging technologies. I learn Python, build machine learning experiments, and create web prototypes that demonstrate applied AI. My focus is on practical, deployable projects that solve real problems.</p>
+      <div class="skills">
+        <span>Python</span><span>Machine Learning</span><span>Deep Learning</span><span>Data Analysis</span><span>HTML/CSS/JS</span>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="project">
+          <img src="images/ai_assistant.jpg" alt="AI Assistant">
+          <h3>AI Personal Assistant</h3>
+          <p>Chatbot prototype using Python + NLP for task automation.</p>
+        </div>
+        <div class="project">
+          <img src="images/robotics.jpg" alt="Robotics">
+          <h3>Smart Robotics Demo</h3>
+          <p>Computer vision demo for basic object detection and navigation.</p>
+        </div>
+        <div class="project">
+          <img src="images/neural.jpg" alt="Neural Network">
+          <h3>Deep Learning Model</h3>
+          <p>Image recognition model trained on small dataset (TensorFlow/PyTorch).</p>
+        </div>
+        <div class="project">
+          <img src="images/blockchain.jpg" alt="Blockchain">
+          <h3>Blockchain & AI Integration</h3>
+          <p>Prototype design combining secure ledgers with model audit logs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="jobs" class="card">
+      <h2>Job Opportunities (Entry-Level)</h2>
+      <p>Below are common entry-level roles in AI and related fields with typical salary ranges for India (INR) and UAE (AED). These are realistic estimates to help you plan your career path.</p>
+      <div class="job-grid">
+        <div class="job">
+          <h3>Python Developer / ML Intern</h3>
+          <p><strong>Skills:</strong> Python, NumPy, Pandas, basic ML, Git</p>
+          <p><strong>India (entry):</strong> ₹2.5–5 LPA</p>
+          <p><strong>UAE (entry):</strong> AED 4,000–8,000 / month</p>
+        </div>
+        <div class="job">
+          <h3>Data Scientist (Junior)</h3>
+          <p><strong>Skills:</strong> Python, statistics, ML models, SQL, visualization</p>
+          <p><strong>India (entry):</strong> ₹3–6 LPA</p>
+          <p><strong>UAE (entry):</strong> AED 5,000–10,000 / month</p>
+        </div>
+        <div class="job">
+          <h3>Machine Learning Engineer</h3>
+          <p><strong>Skills:</strong> TensorFlow/PyTorch, model deployment, APIs</p>
+          <p><strong>India (entry):</strong> ₹4–8 LPA</p>
+          <p><strong>UAE (entry):</strong> AED 6,000–12,000 / month</p>
+        </div>
+        <div class="job">
+          <h3>AI Research Assistant / Intern</h3>
+          <p><strong>Skills:</strong> Mathematics, ML fundamentals, research papers</p>
+          <p><strong>India (entry):</strong> ₹2–5 LPA</p>
+          <p><strong>UAE (entry):</strong> AED 3,500–9,000 / month</p>
+        </div>
+      </div>
+      <p class="note">Note: Salaries vary by company, city, and candidate skills; these are approximate ranges for planning.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>If you'd like to hire or contact me, send a message or email directly.</p>
+      <div class="contact-grid">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your name" required>
+          <input type="email" id="email" placeholder="Your email" required>
+          <textarea id="message" rows="5" placeholder="Your message"></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><strong>Email:</strong> Aadhiyaibrahim@gmail.com</p>
+          <p><strong>Instagram:</strong> @MILLIONAIRE_IBRAHIM</p>
+          <p><strong>Location:</strong> India</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© 2025 AI & Future Tech — Ibrahim King 1234. Built for job opportunities and learning.</p>
+    </footer>
+  </main>
+
+  <script>
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let w = canvas.width = innerWidth;
+    let h = canvas.height = innerHeight;
+    window.addEventListener('resize', () => { w = canvas.width = innerWidth; h = canvas.height = innerHeight; });
+
+    const particles = [];
+    const colors = ['#06b6d4','#7c3aed','#60a5fa','#34d399'];
+
+    function rand(min,max){return Math.random()*(max-min)+min;}
+    function createParticles(count){
+      for(let i=0;i<count;i++){
+        particles.push({x:rand(0,w), y:rand(0,h), r:rand(0.8,2.6), vx:rand(-0.4,0.4), vy:rand(-0.4,0.4), c:colors[Math.floor(rand(0,colors.length))]});
+      }
+    }
+    createParticles(Math.floor((w*h)/60000));
+
+    function draw(){
+      const g = ctx.createLinearGradient(0,0,w,h);
+      g.addColorStop(0,'rgba(2,6,23,0.9)');
+      g.addColorStop(1,'rgba(8,12,24,1)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0,0,w,h);
+
+      for(let p of particles){
+        ctx.beginPath();
+        ctx.fillStyle = p.c;
+        ctx.globalAlpha = 0.85;
+        ctx.moveTo(p.x,p.y);
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fill();
+      }
+
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const a = particles[i], b = particles[j];
+          const dx = a.x-b.x, dy=a.y-b.y;
+          const d = Math.sqrt(dx*dx+dy*dy);
+          if(d<140){
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(100,200,255,'+ (1-d/140)/4 +')';
+            ctx.moveTo(a.x,a.y);
+            ctx.lineTo(b.x,b.y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      for(let p of particles){
+        p.x += p.vx; p.y += p.vy;
+        if(p.x<0) p.x = w; if(p.x> w) p.x = 0;
+        if(p.y<0) p.y = h; if(p.y> h) p.y = 0;
+      }
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    document.querySelectorAll('.nav a').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you! Message sent (demo). Email: ' + document.getElementById('email').value);
+      this.reset();
+      location.hash = '#contact';
+    });
+  </script>
+</body>
+</html>
